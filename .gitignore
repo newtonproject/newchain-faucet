@@ -1,0 +1,8 @@
+/wallet
+debug.test
+debug
+.idea/*
+.vscode/*
+newchain-faucet
+newchain-faucet.exe
+config.toml
