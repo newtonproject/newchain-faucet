@@ -19,7 +19,7 @@ To get from gitlab via `go get`, this will get source and executable program.
 install command
 
 ```bash
-go get github.com/newtonproject/newchain-faucet
+git clone https://github.com/newtonproject/newchain-faucet && cd newchain-faucet && make install
 ```
 
 run NewChainFaucet
@@ -33,8 +33,7 @@ run NewChainFaucet
 install:
 
 ```bash
-git config --global url."git@gitlab.newtonproject.org:".insteadOf "https://gitlab.newtonproject.org/"
-go get github.com/newtonproject/newchain-faucet
+git clone https://github.com/newtonproject/newchain-faucet && cd newchain-faucet && make install
 ```
 run NewChainFaucet
 
@@ -92,7 +91,7 @@ walletpath = "./wallet/"
 
 ```bash
 # Initialize config file
-NewChainFaucet init
+newchain-faucet init
 ```
 
 Just press Enter to use the default configuration, and it's best to create a new user.
@@ -115,17 +114,17 @@ Your configuration has been saved in  ./config.toml
 
 ```bash
 # Create an account
-NewChainFaucet account new
+newchain-faucet account new
 
 # Create 10 accounts
-NewChainFaucet account new -n 10
+newchain-faucet account new -n 10
 ```
 
 ### List all accounts
 
 ```bash
 # list all accounts of the walletPath
-NewChainFaucet account list
+newchain-faucet account list
 ```
 
 ### Start faucet server
@@ -134,7 +133,7 @@ Make sure the default wallet address has a large balance before starting the ser
 
 ```bash
 # Start faucet server with rpc url
-NewChainFaucet start
+newchain-faucet start
 ```
 
 ### Get balance
