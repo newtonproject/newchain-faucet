@@ -25,7 +25,7 @@ git clone https://github.com/newtonproject/newchain-faucet && cd newchain-faucet
 run NewChainFaucet
 
 ```bash
-%GOPATH%/bin/NewChainFaucet.exe
+%GOPATH%/bin/newchain-faucet.exe
 ```
 
 #### Linux or Mac
@@ -38,7 +38,7 @@ git clone https://github.com/newtonproject/newchain-faucet && cd newchain-faucet
 run NewChainFaucet
 
 ```bash
-$GOPATH/bin/NewChainFaucet
+$GOPATH/bin/newchain-faucet
 ```
 
 ### Usage
