@@ -68,10 +68,11 @@ func (cli *CLI) buildStartCmd() *cobra.Command {
 			}
 
 			walletPassword := viper.GetString("faucet.password")
+			isSetPwd := viper.IsSet("faucet.password")
 			var trials int
 			for trials = 0; trials < 3; trials++ {
 				prompt := fmt.Sprintf("Unlocking account %s | Attempt %d/%d", fromAddress, trials+1, 3)
-				if walletPassword == "" {
+				if isSetPwd == false {
 					walletPassword, _ = getPassPhrase(prompt, false)
 				} else {
 					fmt.Println(prompt, "\nUse the `faucet.password` in the config file")
