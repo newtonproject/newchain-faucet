@@ -8,37 +8,24 @@ This is a server program that can get free money for the address of the NewChain
 
 ### Download from releases
 
-Binary archives are published at https://release.cloud.diynova.com/newton/NewChainFaucet/.
+Binary archives are published at releases.
 
 ### Building the source
 
 To get from gitlab via `go get`, this will get source and executable program.
 
-#### Windows
-
-install command
-
-```bash
-git clone https://github.com/newtonproject/newchain-faucet && cd newchain-faucet && make install
-```
-
-run NewChainFaucet
-
-```bash
-%GOPATH%/bin/newchain-faucet.exe
-```
-
 #### Linux or Mac
 
-install:
-
 ```bash
-git clone https://github.com/newtonproject/newchain-faucet && cd newchain-faucet && make install
+git clone https://github.com/newtonproject/newchain-faucet && cd newchain-faucet && make all
 ```
+
+`newchain-faucet` is for ethereum and `newchain-faucet-newton` is for newton.
+
 run NewChainFaucet
 
 ```bash
-$GOPATH/bin/newchain-faucet
+./newchain-faucet
 ```
 
 ### Usage
