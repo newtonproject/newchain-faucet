@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/console"
+	"github.com/ethereum/go-ethereum/console/prompt"
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/sirupsen/logrus"
 )
@@ -24,17 +24,17 @@ func showError(fields logrus.Fields, msg string, args ...interface{}) {
 
 // getPassPhrase retrieves the password associated with an account,
 // requested interactively from the user.
-func getPassPhrase(prompt string, confirmation bool) (string, error) {
+func getPassPhrase(promptStr string, confirmation bool) (string, error) {
 	// prompt the user for the password
-	if prompt != "" {
-		fmt.Println(prompt)
+	if promptStr != "" {
+		fmt.Println(promptStr)
 	}
-	password, err := console.Stdin.PromptPassword("Enter passphrase (empty for no passphrase): ")
+	password, err := prompt.Stdin.PromptPassword("Enter passphrase (empty for no passphrase): ")
 	if err != nil {
 		return "", err
 	}
 	if confirmation {
-		confirm, err := console.Stdin.PromptPassword("Enter same passphrase again: ")
+		confirm, err := prompt.Stdin.PromptPassword("Enter same passphrase again: ")
 		if err != nil {
 			return "", err
 		}
@@ -55,7 +55,7 @@ func stringInSlice(str string, list []string) bool {
 }
 
 // DenominationString is for denomination string
-//const DenominationString = "Available unit: Wei, Ada, Babbage, Shannon, Szabo, Finney, Ether, Einstein, Douglas, Gwei"
+// const DenominationString = "Available unit: Wei, Ada, Babbage, Shannon, Szabo, Finney, Ether, Einstein, Douglas, Gwei"
 const DenominationString = "Available unit: NEW, WEI"
 
 // DenominationList is array for denomination string

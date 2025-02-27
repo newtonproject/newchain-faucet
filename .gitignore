@@ -5,4 +5,6 @@ debug
 .vscode/*
 newchain-faucet
 newchain-faucet.exe
+newchain-faucet-newton
+newchain-faucet-newton.exe
 config.toml
